@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed w-full z-40 top-12 transition-all duration-300 ${
+    <header className={`fixed w-full z-50 top-12 transition-all duration-300 ${
       isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,27 +53,23 @@ export default function Header() {
           </nav>
 
           <button 
-            className="md:hidden p-2"
+            className="md:hidden p-3 rounded-full border border-gray-200 bg-white dark:bg-gray-800 shadow-lg z-50 focus:outline-none"
+            style={{ minWidth: 44, minHeight: 44 }}
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-x-0 top-12 z-50 md:hidden bg-white dark:bg-gray-900 shadow-lg pb-20" style={{marginTop: '44px'}}>
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            <a href="#features" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
-              Features
-            </a>
-            <a href="#pricing-section" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
-              Pricing
-            </a>
-            <a href="#testimonials" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
-              Testimonials
-            </a>
+        <div className="fixed inset-0 z-40 md:hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+          <div className="absolute inset-x-0 top-[56px] bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-xl pb-20 px-4 pt-4 space-y-2 animate-slide-down" style={{zIndex: 41}}>
+            <a href="#features" className="block px-3 py-3 text-lg text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium border-b border-gray-100 dark:border-gray-800">Features</a>
+            <a href="#pricing-section" className="block px-3 py-3 text-lg text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium border-b border-gray-100 dark:border-gray-800">Pricing</a>
+            <a href="#testimonials" className="block px-3 py-3 text-lg text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium border-b border-gray-100 dark:border-gray-800">Testimonials</a>
             <div className="px-3 py-2 flex items-center justify-between">
               <span className="text-gray-600 dark:text-gray-300">Dark Mode</span>
               <button 
@@ -85,7 +81,7 @@ export default function Header() {
             </div>
             <a
               href="#pricing-section"
-              className="block mx-3 py-2 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full text-center font-semibold hover:shadow-lg"
+              className="block mx-3 py-3 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full text-center font-semibold hover:shadow-lg mt-2"
             >
               Get Started
             </a>
