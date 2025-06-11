@@ -8,7 +8,7 @@ const StickyCTA: React.FC = () => (
         href="#pricing"
         className="ml-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:scale-105 transition-transform text-sm"
       >
-        Get Started
+        Buy Now
       </a>
     </div>
     <style>{`
