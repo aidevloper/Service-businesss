@@ -47,8 +47,10 @@ function App(): JSX.Element {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pt-28">
-      <UrgencyBanner />
+    <div className="min-h-screen bg-white dark:bg-gray-900 md:pt-28">
+      <div className="hidden md:block">
+        <UrgencyBanner />
+      </div>
       <Header />
       <Hero />
       <Stats />
