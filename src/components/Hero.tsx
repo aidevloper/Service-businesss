@@ -80,7 +80,7 @@ export default function Hero() {
         <div className={`transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <div className="text-center pt-32 md:pt-40 lg:pt-48">
+          <div className="text-center pt-24 md:pt-40 lg:pt-48">
             <motion.h1 
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
               initial="hidden"
