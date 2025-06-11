@@ -63,7 +63,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-x-0 top-0 z-50 md:hidden bg-white dark:bg-gray-900 shadow-lg pb-20">
+        <div className="fixed inset-x-0 top-12 z-50 md:hidden bg-white dark:bg-gray-900 shadow-lg pb-20" style={{marginTop: '44px'}}>
           <div className="px-4 pt-2 pb-3 space-y-1">
             <a href="#features" className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
               Features

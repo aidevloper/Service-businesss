@@ -34,20 +34,20 @@ const UrgencyBanner: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-600 to-orange-500 text-white py-3 px-4 shadow-lg">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left">
-        <div className="flex-1">
+    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-600 to-orange-500 text-white py-2 px-2 sm:py-3 sm:px-4 shadow-lg text-xs sm:text-base">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center sm:text-left">
+        <div className="flex-1 truncate text-ellipsis overflow-hidden whitespace-nowrap">
           <span className="font-bold">🎉 Limited-Time Launch Offer</span>
-          <span className="mx-2">|</span>
+          <span className="mx-1">|</span>
           <span>Get the All-in-One Tracker for just ₹299 instead of ₹599</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-sm">⏳ Offer ends in:</span>
-          <div className="flex gap-1">
-            <span className="bg-white/20 px-2 py-1 rounded">{timeLeft.days}d</span>
-            <span className="bg-white/20 px-2 py-1 rounded">{timeLeft.hours}h</span>
-            <span className="bg-white/20 px-2 py-1 rounded">{timeLeft.minutes}m</span>
-            <span className="bg-white/20 px-2 py-1 rounded">{timeLeft.seconds}s</span>
+        <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-0">
+          <span className="text-xs sm:text-sm">⏳ Offer ends in:</span>
+          <div className="flex gap-0.5 sm:gap-1">
+            <span className="bg-white/20 px-1.5 py-0.5 rounded">{timeLeft.days}d</span>
+            <span className="bg-white/20 px-1.5 py-0.5 rounded">{timeLeft.hours}h</span>
+            <span className="bg-white/20 px-1.5 py-0.5 rounded">{timeLeft.minutes}m</span>
+            <span className="bg-white/20 px-1.5 py-0.5 rounded">{timeLeft.seconds}s</span>
           </div>
         </div>
       </div>
