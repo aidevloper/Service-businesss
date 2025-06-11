@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -20,9 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`w-full transition-all duration-300 md:fixed md:top-12 md:z-50 ${
-      isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className="w-full bg-white dark:bg-gray-900 fixed top-0 left-0 z-50 md:static">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
