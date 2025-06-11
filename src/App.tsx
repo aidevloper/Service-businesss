@@ -6,6 +6,7 @@ import Features from './components/Features';
 import Features2 from './components/Features2';
 import HowItWorks from './components/HowItWorks';
 import ProductFeatures from './components/ProductFeatures';
+import ComparisonTable from './components/ComparisonTable';
 // import CaseStudies from './components/CaseStudies';
 import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
@@ -58,6 +59,7 @@ function App(): JSX.Element {
       <Features />
       <HowItWorks />
       <ProductFeatures />
+      <ComparisonTable />
       <section id="pricing">
         <Pricing />
       </section>
