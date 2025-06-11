@@ -129,7 +129,7 @@ const Pricing: React.FC = () => {
                 <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                   <span>❓</span> What if I don't like it?
                 </div>
-                <div className="text-gray-700 dark:text-gray-300 ml-6">💬 No worries! If you're not satisfied, just email us within 7 days for a full refund.</div>
+                <div className="text-gray-700 dark:text-gray-300 ml-6">💬 No worries! If you're not satisfied, just email or WhatsApp us within 7 days for a full refund.</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
