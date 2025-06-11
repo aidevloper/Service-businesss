@@ -39,7 +39,7 @@ const UrgencyBanner: React.FC = () => {
         <div className="flex-1 truncate text-ellipsis overflow-hidden whitespace-nowrap">
           <span className="font-bold">🎉 Limited-Time Launch Offer</span>
           <span className="mx-1">|</span>
-          <span>Get the All-in-One Tracker for just ₹299 instead of ₹599</span>
+          <span>Get the All-in-One Tracker for just ₹499 instead of ₹599</span>
         </div>
         <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-0">
           <span className="text-xs sm:text-sm">⏳ Offer ends in:</span>
