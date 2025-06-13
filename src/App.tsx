@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
-import Features from './components/Features';
 import Features2 from './components/Features2';
 import HowItWorks from './components/HowItWorks';
 import ProductFeatures from './components/ProductFeatures';
@@ -56,7 +55,6 @@ function App(): JSX.Element {
       <Hero />
       <Stats />
       <Features2 />
-      <Features />
       <HowItWorks />
       <ProductFeatures />
       <ComparisonTable />
