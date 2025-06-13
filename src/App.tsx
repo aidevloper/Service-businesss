@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -14,8 +14,11 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import UrgencyBanner from './components/UrgencyBanner';
 import StickyCTA from './components/StickyCTA';
+import StickyOffer from './components/StickyOffer';
 
 function App(): JSX.Element {
+  const [isStickyOfferVisible, setIsStickyOfferVisible] = useState(true);
+
   useEffect(() => {
     // Enhanced smooth scrolling implementation
     const handleSmoothScroll = (e: MouseEvent) => {
@@ -65,7 +68,8 @@ function App(): JSX.Element {
       <FAQ />
       <CTASection />
       <Footer />
-      <StickyCTA />
+      <StickyCTA isOfferVisible={isStickyOfferVisible} />
+      <StickyOffer isVisible={isStickyOfferVisible} setIsVisible={setIsStickyOfferVisible} />
     </div>
   );
 }
